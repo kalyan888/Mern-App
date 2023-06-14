@@ -1,9 +1,13 @@
 const mongoose = require("mongoose");
 
 const TodoSchema = new mongoose.Schema({
-  todo: {
-    activity: String,
-    completed: Boolean,
+  todoItem: {
+    type: String,
+    required: true,
+  },
+  status: {
+    type: String,
+    required: true,
   },
 });
 

@@ -1,0 +1,208 @@
+.todo-app-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 30px;
+  height: 90%;
+  background: rgba(255, 255, 255, 0.25);
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+  border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+}
+.todo-main-header-container {
+  height: 60px;
+  text-align: center;
+}
+
+.todo-main-header {
+  color: #fff;
+  font-size: 28px;
+  font-weight: 500;
+}
+
+.add-new-task-container,
+.todo-items-list-container {
+  display: flex;
+  flex-direction: column;
+  padding: 10px 0px;
+  height: 90px;
+  width: 85%;
+  border-radius: 5px;
+  margin: 10px 0;
+  background-color: #fff;
+}
+.add-new-task-container {
+  align-items: center;
+}
+.todo-items-list-container {
+  height: 61%;
+  max-height: 61%;
+}
+.todo-list-header-container,
+.todo-items-container {
+  margin: 0 20px;
+}
+.todo-items-container {
+  height: 60%;
+  overflow-y: auto;
+  margin-bottom: 30px;
+}
+.todo-items-container::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+.todo-items-container::-webkit-scrollbar-track-piece {
+  border-radius: 10px;
+  background: #ccc;
+}
+.todo-items-container::-webkit-scrollbar-thumb {
+  background-color: mediumaquamarine;
+  border-radius: 10px;
+  box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+}
+.todo-items-container::-webkit-scrollbar-track {
+  border-radius: 10px;
+  background-color: darkgrey;
+}
+.new-task-input,
+.valid-task {
+  height: 35px;
+  border: 1px solid mediumaquamarine;
+  width: 70%;
+  border-width: 0 0 1px 0;
+  background-color: transparent;
+  margin: 10px 0 15px 0;
+}
+.valid-task {
+  width: 72%;
+  border: 1px solid #c0392b;
+  border-width: 0 0 2px 0;
+}
+.new-task-input:active,
+.new-task-input:focus {
+  outline: none;
+}
+.add-new-task-btn {
+  --bg: mediumseagreen;
+  --text-color: #fff;
+  position: relative;
+  width: 120px;
+  border: none;
+  background: var(--bg);
+  color: var(--text-color);
+  padding: 10px 0 8px 0;
+  font-weight: bold;
+  transition: 0.2s;
+  border-radius: 35px;
+  opacity: 0.8;
+  box-shadow: #002e30 0px 5px 10px, #fff 0px 5px 6px;
+}
+.add-new-task-btn:hover {
+  cursor: pointer;
+  opacity: 1;
+}
+.add-new-task-btn:active {
+  top: 4px;
+  box-shadow: #002e30 0px 3px 2px, #000 0px 3px 5px;
+}
+.todo-list-header {
+  font-size: 18px;
+  font-weight: 600;
+}
+.todo-no-tasks {
+  font-size: 14px;
+  font-weight: 500;
+  text-align: center;
+  color: mediumseagreen;
+}
+
+/******************************************* Table styles ****************************************/
+table {
+  border-collapse: collapse;
+}
+/* tr:nth-child(even) {
+  color: #fff;
+  background-color: #62c28d;
+} */
+tr {
+  border: solid;
+  border-color: #ccc;
+  border-width: 0 0 1px 0;
+}
+tr:first-child {
+  border-top: none;
+}
+.todo-table-container {
+  padding: 0 5px;
+  width: 95%;
+}
+.todo-thead-tr {
+  display: flex;
+  justify-content: center;
+}
+.todo-thead-th,
+.todo-tbody-td {
+  text-align: left;
+  font-size: 13px;
+  text-overflow: ellipsis;
+}
+.todo-thead-th-1,
+.todo-tbody-td-1 {
+  width: 50%;
+}
+
+.todo-thead-th-2,
+.todo-tbody-td-2 {
+  width: 36%;
+}
+
+.todo-thead-th-3,
+.todo-tbody-td-3 {
+  text-align: center;
+  width: 10%;
+}
+.todo-tbody {
+  display: flex;
+  flex-direction: column;
+}
+.todo-tbody-tr {
+  width: 100%;
+  height: 35px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.todo-del-icon:hover {
+  cursor: pointer;
+}
+.todo-update-container {
+  display: flex;
+  justify-content: flex-end;
+  margin: 5px 20px 10px 0;
+}
+.todo-update-btn {
+  --bg: mediumseagreen;
+  --text-color: #fff;
+  position: relative;
+  width: 120px;
+  border: none;
+  background: var(--bg);
+  color: var(--text-color);
+  padding: 10px 0 8px 0;
+  font-weight: bold;
+  transition: 0.2s;
+  border-radius: 35px;
+}
+@media (max-width: 767px) {
+  .todo-app-container {
+    width: 80vw;
+  }
+}
+
+@media (min-width: 768px) {
+  .todo-app-container {
+    width: 45vw;
+  }
+}
